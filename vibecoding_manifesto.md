@@ -8,17 +8,17 @@ Dieses Dokument definiert NICHT den Code, sondern das VERHALTEN des Agenten.
 
 ---
 
-## 1. BROWSER-FIRST DEVELOPMENT (VISUAL TRUTH)
-**"Don't guess. Look."**
+## 1. UI SNIPING (DON'T BUILD, ADAPT)
+**"Steal like an artist, ship like a pro."**
 
-Ein Code, der kompiliert, kann trotzdem hässlich sein.
-* **Die Regel:** Nach jeder UI-Änderung **MUSS** der Agent den integrierten Browser nutzen (`/open-browser`).
-* **Der Workflow:**
-    1.  Code schreiben.
-    2.  Server starten (`npm run dev`).
-    3.  Browser öffnen auf `localhost:3000`.
-    4.  **Screenshot-Analyse:** Mache einen Screenshot und analysiere: "Sieht das aus wie ein $2 Suitcase oder wie ein Premium SaaS?".
-    5.  Wenn es hässlich ist -> Sofort korrigieren (Iterieren), bevor du den User fragst.
+Wir schreiben keine komplexen UI-Komponenten (wie komplexe Dashboards, Landing Pages) von null.
+* **Source:** `21st.dev`, `shadcn/ui`, `CodePen`.
+* **The Workflow:**
+    1.  **Search:** Finde eine Komponente, die zu 80% passt.
+    2.  **Snipe:** Kopiere den Code oder Prompt der Komponente.
+    3.  **Adapt:** Passe Farben, Fonts und Daten an unser Branding an.
+    4.  **Integrate:** Prüfe es im Browser.
+* **Why:** Eine gestohlene und angepasste Profi-Komponente ist immer besser und schneller als eine selbstgebastelte.
 
 ---
 

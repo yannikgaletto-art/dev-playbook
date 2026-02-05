@@ -32,16 +32,21 @@ Wir nutzen nicht ein Modell für alles. Wir nutzen Spezialisten.
 
 ---
 
-## 2. BACKEND & DATA: SUPABASE INTEGRATION
+## 2. BACKEND & INFRASTRUCTURE
+**"Local for dev, Cloud for eternity."**
+
+### 🗄️ Supabase (Data Core)
 **"Microsoft Excel on Steroids"**
+* **Rule:** "Nutze Supabase für alle Backend-Daten. Keine lokalen JSON-Dateien für User-Daten."
+* **Implementation:** Schema Generation via MCP. Security First (RLS). Real-Time Sync.
 
-### 🛑 Die Eiserne Regel
-> **"Nutze Supabase für alle Backend-Daten. Keine lokalen JSON-Dateien für User-Daten."**
+### ☁️ Modal.com (Background Workers)
+* **Trigger:** Wenn ein Task länger als 5 Minuten dauert oder wiederkehrend ist (Cronjob).
+* **Action:** Deploye das Skript als Modal App. Lasse es niemals lokal blockieren.
 
-### 🛠️ Implementierung via MCP
-1.  **Schema Generation:** Nutze das Supabase MCP, um Tabellen basierend auf der `mission.md` zu erstellen.
-2.  **Security First (RLS):** KEINE Tabelle wird ohne **Row Level Security (RLS)** erstellt.
-3.  **Real-Time Sync:** Jedes Dashboard muss via Supabase Realtime-Subscription live sein. Keine Refresh-Buttons!
+### 🧠 NotebookLM (Research Core)
+* **Trigger:** Analyse von großen Dokumenten, Büchern oder Datensätzen.
+* **Role:** The "External Long-Term Memory".
 
 ---
 

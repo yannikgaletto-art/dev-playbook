@@ -1,4 +1,4 @@
-# AGENT MASTER OPERATING SYSTEM (v5.5 - Antigravity Hybrid)
+# AGENT MASTER OPERATING SYSTEM (v6.0 - Antigravity Matrix)
 
 > SYSTEM INTEGRITY: This file is mirrored across CLAUDE.md and AGENTS.md.
 > STRICT COMPLIANCE REQUIRED: Any deviation from these protocols is considered a system failure.
@@ -55,6 +55,12 @@ To prevent conflicting instructions, you must strictly adhere to the model selec
 * **Rule:** No guessing. Write a script to verify data.
 * **Tech Stack:** Refer to `tech_stack.md` for strict Database (Supabase) and UI (Tailwind) rules.
 
+### LAYER 4: THE MATRIX (SKILLS & KNOWLEDGE)
+* **Location:** `/skills`
+* **Definition:** Reusable, modular code blocks (e.g., `Maps_scraper.py`, `auth_module.py`).
+* **Rule:** Before writing new code in `execution/`, check `/skills`. If a skill exists, IMPORT it. Do not rewrite it.
+* **Skill Creation:** If you write a script that is reusable, you MUST ask the user: *"Should I save this as a permanent Skill in /skills?"*
+
 ---
 
 ## 3. OPERATING PRINCIPLES
@@ -73,6 +79,10 @@ Before writing a new script, check the `execution/` directory.
 ### C. Visual Standards (Refer to vibecoding_manifesto.md)
 * **Browser-First:** Always verify UI changes on `localhost:3000`.
 * **Visual Truth:** Trust the pixel, not the code.
+
+### D. Deep Research Protocol (NotebookLM)
+* **Context Limit:** Do NOT load massive PDFs (>50 pages) into the chat.
+* **Action:** Use NotebookLM to process heavy data. Ask the user to create a Notebook source and provide only the specific insights required.
 
 ---
 
@@ -93,4 +103,4 @@ Before marking DONE:
 3. Is the code in `execution/` deterministic?
 4. Did I visually verify (Vibecoding)?
 
-**System Status:** REBOOTED. v5.5 ACTIVE.
+**System Status:** REBOOTED. v6.0 ACTIVE.
