@@ -1,5 +1,14 @@
+
 # TACTICAL BACKLOG
 
-1.  **System-Check:** Sicherstellen, dass alle APIs (OpenAI, Anthropic, Apify, Supabase) korrekt verbunden sind.
-2.  **Skill-Test A (Google Maps):** Ausführen des `gmaps_lead_generation` Scripts für eine Test-Region (z.B. "Cafés in Berlin"), um die Datenqualität zu prüfen.
-3.  **Skill-Test B (Upwork):** Ausführen des `upwork_scrape_apply` Scripts (nur Scraping, kein Apply), um zu sehen, welche Jobs aktuell nach AI-Automatisierung fragen.
+## PRIORITY 1: SYSTEM CONNECTION
+- [ ] **MCP Verification:** Sicherstellen, dass Supabase, GitHub und Filesystem MCPs korrekt verbunden sind und Schreibrechte haben.
+- [ ] **Environment Check:** Validieren, dass alle API-Keys (Apify, OpenAI, Anthropic, Supabase) in der `.env` gesetzt und aktiv sind.
+
+## PRIORITY 2: FIRST EXPERIMENT (GMAPS)
+- [ ] **Script Generation:** Den Agenten anweisen, basierend auf `directives/gmaps_lead_generation.md` das Python-Skript `execution/gmaps_pipeline.py` zu erstellen.
+- [ ] **Dry Run:** Ausführen des Skripts für eine kleine Test-Region (z.B. "Web Design Agenturen in München", Limit: 10).
+- [ ] **Data Audit:** Überprüfen, ob die Daten sauber in der Supabase-Tabelle `leads` gelandet sind.
+
+## PRIORITY 3: SKILL EXPANSION
+- [ ] **Next Directive:** Vorbereitung des `scrape_leads.md` (Apify) Workflows für breitere Suchen.
