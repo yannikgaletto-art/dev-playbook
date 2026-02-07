@@ -1,3 +1,15 @@
 node_modules/
 .DS_Store
 .env
+
+# --- OS v5.0 Enterprise Security ---
+.env
+.env.local
+.env.production
+mcp_config.json
+mcp.json
+**/__pycache__
+.DS_Store
+.tmp/
+execution/output/*
+!execution/output/.keep
